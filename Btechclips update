@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cassey Codes 🎬 | Movies & Trailers</title>
+<title>⚡🔥Btech Clips 🎬🔥🌟 | Movies & Trailers</title>
 
 <style>
 /* =========================================================
-   CASSEY CODES — MOVIE WEBSITE
+    — MOVIE WEBSITE
    EVERYTHING IS INSIDE THIS ONE HTML FILE
    ========================================================= */
 
@@ -768,7 +768,7 @@ footer p{
 <header>
 
     <a href="#" class="logo">
-        CASSEY<span> CODES</span> ⚡
+        BTECH<span> CLIPS</span> ⚡
     </a>
 
     <nav>
@@ -801,7 +801,8 @@ footer p{
     <div class="hero-content">
 
         <div class="badge">
-            🎬 WELCOME TO CASSEY CODES
+            🎬 WELCOME TO BTECH CLIPS
+<p>by Cassey Migoya Davidson</p>
         </div>
 
         <h1>
@@ -1412,7 +1413,7 @@ footer p{
 <footer>
 
     <div class="footer-logo">
-        CASSEY CODES ⚡
+⚡ BTECH CLIPS 
     </div>
 
     <p>
@@ -1429,9 +1430,8 @@ footer p{
     </div>
 
     <p style="margin-top:20px;">
-        © <span id="year"></span> Cassey Codes. All rights reserved.
+        © <span id="year"></span> BTECHCLIPS programed by @Cassey Migoya Davidson. All rights reserved.
     </p>
-
 </footer>
 
 
@@ -1762,6 +1762,7 @@ document.querySelectorAll(".movie-card")
 
 </script>
 
+
 </body>
 </html>
-```
+
