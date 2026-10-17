@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netherite Hub 🔥</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#10060b;color:#fff;font-family:Rajdhani,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 100%,#a12b12,transparent 50%),radial-gradient(ellipse at 10% 20%,#451052,transparent 50%),linear-gradient(140deg,#10060b,#220b13,#080407);background-size:200% 200%;animation:lava 12s infinite alternate}
+@keyframes lava{to{background-position:100% 100%}}
+#embers{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+nav{position:fixed;top:0;width:100%;z-index:10;padding:20px 7%;display:flex;align-items:center;justify-content:space-between;background:#10060be8;backdrop-filter:blur(15px);border-bottom:1px solid #ff542744}
+.logo{font:900 19px Orbitron,sans-serif;color:white;text-decoration:none}
+.logo span{color:#ff572b}
+.links{display:flex;align-items:center;gap:25px}
+.links a{color:#ddd;text-decoration:none;font-weight:700;font-size:17px}
+.links a:hover{color:#ff9d43}
+.menu{display:none;background:transparent;color:white;border:1px solid #853629;padding:7px 12px;font-size:22px}
+.btn{display:inline-block;padding:14px 22px;color:white;background:linear-gradient(135deg,#ff6b2d,#bd1733);border:1px solid #ff9763;font:700 11px Orbitron,sans-serif;letter-spacing:1px;text-decoration:none;cursor:pointer;transition:.3s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 30px #ff4b2266;filter:brightness(1.2)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 20px 100px;position:relative}
+.hero-content{max-width:1000px}
+.tag{display:inline-block;border:1px solid #ff713c66;background:#ff401611;padding:10px 16px;color:#ffb58e;letter-spacing:2px;font-weight:700;margin-bottom:28px}
+h1{font:900 clamp(38px,8vw,95px)/1.15 Orbitron,sans-serif;letter-spacing:-2px}
+.fire{display:block;background:linear-gradient(#fff5b8,#ffb12f 30%,#ff4926 65%,#9d1238);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 25px #ff3b2444)}
+.hero p{max-width:620px;margin:25px auto 32px;color:#c5b0b7;font-size:21px;line-height:1.6}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.secondary{background:#ffffff09;border:1px solid #ffffff44}
+.scroll{position:absolute;bottom:25px;letter-spacing:3px;color:#d2a0a0;font-size:12px;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(-7px)}}
+section.content{padding:85px 7%}
+.heading{text-align:center;margin-bottom:45px}
+.heading small{display:block;color:#ff925b;font:700 11px Orbitron,sans-serif;letter-spacing:4px;margin-bottom:14px}
+.heading h2{font:700 clamp(25px,4vw,42px) Orbitron,sans-serif}
+.heading p{color:#b9a5ac;font-size:18px;margin-top:13px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1200px;margin:auto}
+.card{--accent:#ff542b;padding:30px;background:linear-gradient(145deg,#351721dd,#140a10f5);border:1px solid #ff795233;position:relative;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 0 35px #ff49261a}
+.icon{font-size:42px;margin-bottom:20px;filter:drop-shadow(0 0 12px #ff5b3855)}
+.card h3{font:700 17px Orbitron,sans-serif;margin-bottom:15px}
+.card p{color:#b9a5ac;line-height:1.7;font-size:17px}
+.card a{display:inline-block;margin-top:22px;color:var(--accent);font-weight:700;text-decoration:none}
+.server{max-width:850px;margin:auto;padding:38px 25px;text-align:center;border:1px solid #ff754b66;background:linear-gradient(135deg,#481b26aa,#150912ee)}
+.server-label{font:700 12px Orbitron,sans-serif;letter-spacing:3px;color:#ffac80}
+.server-ip{margin:24px 0;font:700 clamp(18px,4vw,32px) Orbitron,sans-serif;overflow-wrap:anywhere}
+.server p{color:#bba6ad;margin-bottom:22px}
+.stats{max-width:850px;margin:28px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{text-align:center;padding:22px 5px;border:1px solid #ffffff18;background:#ffffff06}
+.stat strong{display:block;font:700 22px Orbitron,sans-serif;color:#ff8752;margin-bottom:8px}
+.stat span{color:#b9a5ac}
+.join{max-width:850px;margin:auto;text-align:center;padding:55px 25px;border:1px solid #ff5a3844;background:radial-gradient(ellipse at 50% 100%,#ff40152a,transparent 70%),#190b13}
+.join p{color:#c4afb6;font-size:18px;max-width:550px;margin:20px auto 25px;line-height:1.6}
+footer{text-align:center;padding:32px 15px;color:#9f8991;border-top:1px solid #ffffff12}
+footer strong{display:block;font:700 17px Orbitron,sans-serif;color:#ff8251;margin-bottom:12px}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:#291019;border:1px solid #ff754b;padding:13px 20px;z-index:50;opacity:0;pointer-events:none;transition:.3s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#top{position:fixed;bottom:20px;right:20px;width:43px;height:43px;background:#32131b;border:1px solid #ff754b;color:white;cursor:pointer;opacity:0;pointer-events:none;z-index:9}
+#top.show{opacity:1;pointer-events:auto}
+@media(max-width:800px){nav{padding:16px 5%}.menu{display:block}.links{display:none;position:absolute;top:100%;left:0;width:100%;padding:15px 5% 22px;background:#11070bf7;flex-direction:column;align-items:stretch;gap:18px}.links.open{display:flex}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){section.content{padding:65px 5%}.cards{grid-template-columns:1fr}.hero p{font-size:18px}.stats{gap:5px}.stat strong{font-size:16px}.stat span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="embers"></canvas>
+
+<nav>
+<a href="#home" class="logo">NETHERITE <span>HUB</span></a>
+<button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#features">Features</a><a href="#server">Server</a><a href="#community">Community</a><a class="btn" href="#server">ENTER THE NETHER ↗</a>
+</div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="tag">🔥 THE ULTIMATE MINECRAFT EXPERIENCE</div>
+<h1>WELCOME TO <span class="fire">NETHERITE HUB</span></h1>
+<p>Escape the ordinary. Enter a world forged in fire, powered by adventure, and built for legends. Your Minecraft journey starts here.</p>
+<div class="actions">
+<a class="btn" href="#server">⚔ EXPLORE THE HUB</a>
+<a class="btn secondary" href="#features">DISCOVER MORE ↓</a>
+</div>
+</div>
+<div class="scroll">▼ DESCEND INTO THE UNKNOWN ▼</div>
+</section>
+
+<section class="content" id="features">
+<div class="heading reveal"><small>FORGED IN FIRE</small><h2>NOT YOUR AVERAGE HUB.</h2><p>Choose your path. Create your legend.</p></div>
+<div class="cards">
+<article class="card reveal" style="--accent:#ff5934"><div class="icon">🔥</div><h3>NETHER ENERGY</h3><p>Experience a fiery atmosphere inspired by Minecraft's most dangerous dimension.</p><a href="#server">ENTER THE NETHER ↗</a></article>
+<article class="card reveal" style="--accent:#c36aff"><div class="icon">💎</div><h3>NETHERITE STYLE</h3><p>Dark aesthetics, purple energy, glowing embers, and legendary loot vibes.</p><a href="#community">EXPLORE THE HUB ↗</a></article>
+<article class="card reveal" style="--accent:#ffb347"><div class="icon">⚔️</div><h3>LEGENDARY ADVENTURES</h3><p>Gear up, explore new possibilities, and create your own Minecraft legacy.</p><a href="#server">START YOUR QUEST ↗</a></article>
+</div>
+</section>
+
+<section class="content" id="server">
+<div class="heading reveal"><small>THE GATEWAY AWAITS</small><h2>ENTER THE REALM.</h2><p>Your adventure is one connection away.</p></div>
+<div class="server reveal">
+<div class="server-label">MINECRAFT SERVER ADDRESS</div>
+<div class="server-ip" id="serverIP">YOUR-SERVER-IP-HERE</div>
+<p>Replace the placeholder with your actual Minecraft server IP.</p>
+<button class="btn" id="copy">▣ COPY SERVER ADDRESS</button>
+</div>
+<div class="stats reveal">
+<div class="stat"><strong>∞</strong><span>ADVENTURES</span></div>
+<div class="stat"><strong>24/7*</strong><span>READY FOR ACTION</span></div>
+<div class="stat"><strong>1</strong><span>LEGENDARY HUB</span></div>
+</div>
+<p style="text-align:center;color:#9f8991;font-size:12px;margin-top:12px">*Decorative text, not live server data.</p>
+</section>
+
+<section class="content" id="community">
+<div class="join reveal">
+<div class="heading" style="margin-bottom:20px"><small>YOUR LEGEND STARTS NOW</small><h2>RISE FROM THE ASHES.</h2></div>
+<p>The Nether is calling. Bring your courage and prepare to make history.</p>
+<a href="#server" class="btn">JOIN THE ADVENTURE ↗</a>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>NETHERITE HUB</strong>
+<p>Forged in fire. Built for adventure.</p>
+<p style="margin-top:8px">Not affiliated with Mojang or Microsoft.</p>
+<p style="margin-top:10px">© <span id="year"></span> Netherite Hub.</p>
+</footer>
+
+<button id="top" aria-label="Back to top">↑</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s);
+$("#year").textContent = new Date().getFullYear();
+
+$("#menu").addEventListener("click", () => {
+const open = $("#links").classList.toggle("open");
+$("#menu").setAttribute("aria-expanded", String(open));
+$("#menu").textContent = open ? "✕" : "☰";
+});
+
+document.querySelectorAll("#links a").forEach(a => a.addEventListener("click", () => {
+$("#links").classList.remove("open");
+$("#menu").setAttribute("aria-expanded","false");
+$("#menu").textContent = "☰";
+}));
+
+let toastTimer;
+function notify(msg) {
+$("#toast").textContent = msg;
+$("#toast").classList.add("show");
+clearTimeout(toastTimer);
+toastTimer = setTimeout(() => $("#toast").classList.remove("show"),2500);
+}
+
+$("#copy").addEventListener("click", async () => {
+const ip = $("#serverIP").textContent.trim();
+if (!ip || ip === "YOUR-SERVER-IP-HERE") {
+notify("⚠ Add your real Minecraft server IP first!");
+return;
+}
+try {
+await navigator.clipboard.writeText(ip);
+notify("✓ Server IP copied!");
+} catch {
+const field = document.createElement("textarea");
+field.value = ip;
+field.style.position = "fixed";
+field.style.opacity = "0";
+document.body.appendChild(field);
+field.select();
+const ok = document.execCommand("copy");
+field.remove();
+notify(ok ? "✓ Server IP copied!" : "Server IP: " + ip);
+}
+});
+
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reveals = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && !reduced) {
+const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+observer.unobserve(entry.target);
+}
+}),{threshold:.12});
+reveals.forEach(el => observer.observe(el));
+} else reveals.forEach(el => el.classList.add("visible"));
+
+window.addEventListener("scroll",() => $("#top").classList.toggle("show",scrollY>400),{passive:true});
+$("#top").addEventListener("click",() => scrollTo({top:0,behavior:reduced?"auto":"smooth"}));
+
+const canvas = $("#embers");
+const ctx = canvas.getContext("2d");
+if (ctx) {
+let w,h,particles=[],frame=null,last=0;
+const count = reduced ? 0 : (innerWidth<600 ? 30 : 75);
+function resize() {
+const dpr=Math.min(devicePixelRatio||1,2);
+w=innerWidth;h=innerHeight;
+canvas.width=w*dpr;canvas.height=h*dpr;
+canvas.style.width=w+"px";canvas.style.height=h+"px";
+ctx.setTransform(dpr,0,0,dpr,0,0);
+particles=Array.from({length:count},()=>({
+x:Math.random()*w,y:Math.random()*h,
+r:Math.random()*2.5+.5,speed:Math.random()*.8+.2,
+drift:(Math.random()-.5)*.6,
+alpha:Math.random()*.6+.2,
+hue:Math.random()>.8?280:15+Math.random()*30
+}));
+}
+function animate(t) {
+if(document.hidden){frame=null;return}
+if(t-last<32){frame=requestAnimationFrame(animate);return}
+last=t;ctx.clearRect(0,0,w,h);
+particles.forEach(p=>{
+p.y-=p.speed;p.x+=p.drift+Math.sin(p.y*.015)*.25;
+if(p.y < -10){p.y=h+10;p.x=Math.random()*w}
+if(p.x < -10)p.x=w+10;
+if(p.x > w+10)p.x=-10;
+ctx.beginPath();
+ctx.fillStyle=`hsla(${p.hue},100%,62%,${p.alpha})`;
+ctx.shadowBlur=p.r*5;
+ctx.shadowColor=p.hue>100?"#bd55ff":"#ff5729";
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+});
+ctx.shadowBlur=0;
+frame=requestAnimationFrame(animate);
+}
+function stop(){if(frame!==null)cancelAnimationFrame(frame);frame=null}
+function start(){if(!reduced&&!document.hidden&&frame===null)frame=requestAnimationFrame(animate)}
+resize();start();
+addEventListener("resize",resize,{passive:true});
+document.addEventListener("visibilitychange",()=>document.hidden?stop():start());
+}
+})();
+</script>
+</body>
+</html>
